@@ -1,0 +1,10 @@
+zillow_api:
+  url: "https://api.zillow.com/v1"
+  key: "mock_zillow_key_123"
+redfin_api:
+  url: "https://api.redfin.com/v1"
+  key: "mock_redfin_key_456"
+default_market:
+  appreciation_rate_annual: 0.03
+  rent_to_value_ratio: 0.007
+  vacancy_rate: 0.05

@@ -1,0 +1,61 @@
+extraction: |
+  You are an expert real estate analyzer. From the provided property document text, extract structural details and metadata.
+  Extract:
+  - Address
+  - Lot size (in sqft)
+  - Building size (in sqft)
+  - Bedrooms count
+  - Bathrooms count
+  - Year built
+  - Roof type
+  - Foundation type
+  - Overall condition (excellent/good/fair/poor)
+  
+  Return your response as a valid JSON object matching this schema:
+  {{
+    "address": "...",
+    "lot_size_sqft": 0,
+    "building_sqft": 0,
+    "bedrooms": 0,
+    "bathrooms": 0.0,
+    "year_built": 0,
+    "roof_type": "...",
+    "foundation_type": "...",
+    "condition": "..."
+  }}
+  Ensure it contains ONLY valid JSON and nothing else.
+
+risk: |
+  You are a real estate risk assessment agent. Analyze the inspection/deed details to list all potential risks.
+  Categorize them into structural issues, title/legal problems, location hazards, and market risks.
+  For each risk, provide a severity rating (high, medium, low) and a 1-sentence explanation.
+  
+  Return your response as a valid JSON list matching this schema:
+  [
+    {{
+      "category": "structural | legal | location | market",
+      "risk": "Risk description",
+      "severity": "high | medium | low",
+      "details": "Explanation..."
+    }}
+  ]
+  Ensure it contains ONLY valid JSON and nothing else.
+
+qa: |
+  You are a real estate Q&A assistant. Answer the user's question about the property based ONLY on the provided document excerpts.
+  If the answer is not available in the documents, respond exactly with "Not available in documents."
+  
+  Context:
+  {context}
+  
+  Question: {question}
+  Answer:
+
+recommendation: |
+  You are an investment advisor. The property costs ${price:,}, has a calculated cap rate of {cap_rate:.2f}%, and a calculated risk score of {risk_score}/100.
+  Recommend: BUY or PASS? Justify your recommendation in exactly two sentences.
+
+market: |
+  You are a market analyst. Based on the property's purchase price of ${price:,} and comparisons with {count} recent sales nearby,
+  analyze if the subject property is overpriced, underpriced, or fair market value.
+  Specify the percentage variance and summarize the neighborhood price trend (up, flat, or down).

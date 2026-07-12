@@ -1,0 +1,23 @@
+structural_issues:
+  foundation_cracks: 20
+  roof_age_gt_20: 20
+  water_damage: 15
+  termites: 15
+title_problems:
+  liens: 25
+  easements: 15
+  boundary_dispute: 15
+environmental_hazards:
+  flood_zone: 30
+  radon: 10
+  asbestos: 15
+zoning_legal:
+  non_conforming_use: 20
+  building_violations: 15
+market_risks:
+  declining_neighborhood: 15
+  high_vacancy: 15
+system_ages:
+  old_hvac: 10
+  old_electrical: 10
+  old_plumbing: 10
