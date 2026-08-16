@@ -1,5 +1,7 @@
 # PropertyRAG - Real Estate Property Advisor Agent
 
+[English](README.md) | [Türkçe](README_TR.md)
+
 PropertyRAG is a professional property analysis, risk evaluation, and investment modeling application. It reads uploaded property deeds, appraisal reports, and home inspections, extracts property characteristics, calculates risk indexes, computes mortgage and NPV/IRR cash-flows, compares neighborhood comps, and renders Buy/Pass reports.
 
 ---
